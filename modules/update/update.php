@@ -74,6 +74,7 @@ function exec_ogp_module()
 	}
 	
 	$gitHubBranchName = urlencode(!empty($settings['custom_github_update_branch_name']) ? $settings['custom_github_update_branch_name'] : 'master');
+	echo $gitHubBranchName;
 	
 	define('RSS_REMOTE_PATH', $gitHubURL . REPONAME . '/commits/' . $gitHubBranchName . '.atom');
 	define('MODULE_PATH', 'modules/'.$_GET['m'].'/');
