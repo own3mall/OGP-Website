@@ -300,7 +300,7 @@ function exec_ogp_module() {
 		$update_complete = false;
 		echo "<form method=POST><input type='image' name='stop_update' onsubmit='submit-form();' src='modules/administration/images/remove.gif'>". get_lang("stop_update") ."</input></form>";
 		if (empty($log_txt))
-			$log_txt = not_available;
+			$log_txt = get_lang("not_available");
 		if(!isset($_GET['master']))
 		{
 			$kbytes = $remote->rsync_progress($home_info['home_path']);
